@@ -40,10 +40,10 @@ function calculateSalesTax(salesData, taxRates) {
   for (var i = 0; i < salesData.length; i++) {
     var currRecord = salesData[i];
     var total = totalSales(currRecord.sales);
-    var totalTaxes = calculateTax(total,currRecord.province, taxRates);
+    var totalTaxes = calculateTax(total, currRecord.province, taxRates);
     if (!finalOutput[currRecord.name]) {
-        finalOutput[currRecord.name] = {totalSales:0, totalTaxes:0};
-      }
+      finalOutput[currRecord.name] = {totalSales: 0, totalTaxes: 0};
+    }
     finalOutput[currRecord.name].totalSales += total;
     finalOutput[currRecord.name].totalTaxes += totalTaxes;
 
